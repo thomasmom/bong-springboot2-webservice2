@@ -32,7 +32,8 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-oauth2-client')
     compile('org.springframework.session:spring-session-jdbc')
     compile('com.h2database:h2')
-    compileOnly('org.projectlombok:lombok')
+    compile('org.mariadb.jdbc:mariadb-java-client')
+    compile('org.projectlombok:lombok:1.18.12')
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude module: 'junit'
     }
@@ -40,8 +41,7 @@ dependencies {
     testCompile('org.junit.jupiter:junit-jupiter-params:5.2.0')
     testCompile('org.springframework.security:spring-security-test')
     testRuntime('org.junit.jupiter:junit-jupiter-engine:5.2.0')
-    compileOnly 'org.projectlombok:lombok:1.18.12'
-    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor ('org.projectlombok:lombok:1.18.12')
 }
 
 test {
